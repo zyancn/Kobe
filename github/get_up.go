@@ -36,7 +36,7 @@ func makeGetupMsg(city string) (body string, isGetupEarly bool) {
 	now := time.Now().In(cstZone)
 	// 3点到18点起床都有效
 	isGetupEarly = 3 < now.Hour() && now.Hour() < 24
-	body = fmt.Sprintf("今天的起床时间是--%s\n", now.Format(time.Kitchen))
+	body = fmt.Sprintf("今天的起床时间是--%s\n上班赚本金！继续梭哈crypto！", now.Format(time.Kitchen))
 
 	if len(weatherMsg) > 0 {
 		body = fmt.Sprintf("%s\n %s\n", body, weatherMsg)
